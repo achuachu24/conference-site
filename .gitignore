@@ -1,0 +1,13 @@
+# 忽略 VS Code 配置文件
+.vscode/
+
+# 忽略临时文件
+*.log
+*.tmp
+
+# 忽略系统自动生成文件
+.DS_Store
+Thumbs.db
+
+# 如果以后你用 node.js 或其他框架，也可以加上 node_modules/
+node_modules/
