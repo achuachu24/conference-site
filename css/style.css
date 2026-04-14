@@ -429,24 +429,3 @@ body > .navbar + .site-header {
     }
   }
   
-.btn-orange {
-  background-color: #fd7e14;
-  color: #fff;
-  border: none;
-}
-
-.btn-orange:hover {
-  background-color: #e96b02;
-  color: #fff;
-}
-
-.btn-red {
-  background-color: #dc3545;
-  color: #fff;
-  border: none;
-}
-
-.btn-red:hover {
-  background-color: #bb2d3b;
-  color: #fff;
-}
