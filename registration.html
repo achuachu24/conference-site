@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IEEE USYS 2026 - Registration</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="registration-page">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">IEEE USYS 2026</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="committee.html">Committee</a></li>
+          <li class="nav-item"><a class="nav-link" href="program.html">Program</a></li>
+          <li class="nav-item"><a class="nav-link" href="topic.html">Topic</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="registration.html">Registration</a></li>
+          <li class="nav-item"><a class="nav-link" href="hotel.html">Hotel</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Welcome, Visitor</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="registration.html">Register</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="site-header py-4">
+    <div class="container d-flex align-items-center">
+      <div class="flex-grow-1">
+        <h1>IEEE</h1>
+        <h4>IEEE 11TH INTERNATIONAL CONFERENCE ON UNDERWATER SYSTEM TECHNOLOGY: THEORY AND APPLICATIONS</h4>
+        <p>16th to 18th October 2026, Shanghai, China</p>
+        <div class="theme-badge">Registration Upload</div>
+      </div>
+      <div class="header-images d-none d-md-block">
+        <img src="img/1.jpg" alt="USYS 2026 banner" class="rounded img-fluid me-2">
+        <img src="img/2.jpg" alt="Shanghai skyline" class="rounded img-fluid">
+      </div>
+    </div>
+  </header>
+
+  <main class="container registration-main">
+    <section class="registration-shell">
+      <div class="row g-0">
+        <div class="col-lg-5">
+          <div class="registration-copy">
+            <span class="registration-kicker">Author Service</span>
+            <h1>Registration Submission</h1>
+            <p>Upload the conference payment record for your paper here. The system will save the Paper ID, First Author's Name, and Payment Screenshot to the registration database.</p>
+            <p>请在此提交论文缴费信息。系统会将 Paper ID、First Author's Name 和 Payment Screenshot 保存到后台数据库中。</p>
+            <ul class="registration-points">
+              <li>Paper ID and first author name are required.</li>
+              <li>Payment Screenshot supports PNG, JPG, JPEG, and WEBP.</li>
+              <li>After you click confirm, the page will show “上传成功”.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="registration-form-pane">
+            <h2>Complete Your Upload</h2>
+            <p>Please fill in the form below and click confirm to submit your registration payment screenshot.</p>
+
+            <form id="registrationForm" class="registration-form" novalidate>
+              <div class="mb-3">
+                <label class="form-label" for="paperId">Paper ID</label>
+                <input class="form-control" id="paperId" name="paperId" type="text" maxlength="100" placeholder="e.g. 12" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="firstAuthorName">First Author's Name</label>
+                <input class="form-control" id="firstAuthorName" name="firstAuthorName" type="text" maxlength="120" placeholder="e.g. Alice Zhang" required>
+              </div>
+
+              <div class="mb-4">
+                <label class="form-label" for="paymentScreenshot">Payment Screenshot</label>
+                <input class="form-control" id="paymentScreenshot" name="paymentScreenshot" type="file" accept=".png,.jpg,.jpeg,.webp,image/png,image/jpeg,image/webp" required>
+                <div class="registration-meta">
+                  <span id="selectedFileName">No file selected.</span>
+                  <span>Max size: 5 MB</span>
+                </div>
+              </div>
+
+              <button id="submitButton" class="btn btn-danger registration-submit" type="submit">Confirm / 确定</button>
+              <div id="formStatus" class="registration-status" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white py-3">
+    <div class="container text-center small">
+      2026 IEEE USYS Conference Website
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/registration.js"></script>
+</body>
+</html>

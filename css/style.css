@@ -1,8 +1,22 @@
 /* css/style.css */
+html,
+body {
+    margin: 0;
+    padding: 0;
+  }
+
 body {
     font-family: "Helvetica Neue", Arial, sans-serif;
     background-color: #ffffff;
     color: #222;
+  }
+
+body > .navbar {
+    margin-bottom: 0;
+  }
+
+body > .navbar + .site-header {
+    margin-top: 0 !important;
   }
   
   /* 顶部横幅 */
@@ -77,4 +91,362 @@ body {
   footer {
     margin-top: 30px;
   }
+
+  .hotel-page {
+    background: linear-gradient(180deg, #f3f6fb 0%, #ffffff 260px);
+  }
+
+  .hotel-main {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .hotel-hero {
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 18px 48px rgba(8, 21, 58, 0.08);
+    overflow: hidden;
+  }
+
+  .hotel-copy {
+    padding: 2rem;
+  }
+
+  .hotel-page-title {
+    margin-bottom: 0.5rem;
+    color: #0d6efd;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .hotel-eyebrow {
+    display: inline-block;
+    margin-bottom: 0.85rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(13, 110, 253, 0.1);
+    color: #0b4aa8;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .hotel-name {
+    font-size: 2.15rem;
+    font-weight: 700;
+    color: #08153a;
+    margin-bottom: 1rem;
+  }
+
+  .hotel-summary {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #32415f;
+    margin-bottom: 0;
+  }
+
+  .hotel-intro-note {
+    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #32415f;
+  }
+
+  .hotel-summary .cn-text,
+  .hotel-meta .cn-text,
+  .hotel-table .cn-text,
+  .hotel-list .cn-text {
+    display: block;
+    margin-top: 0.25rem;
+    color: #5e6b85;
+  }
+
+  .hotel-gallery-card {
+    height: 100%;
+    border: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(8, 21, 58, 0.08);
+  }
+
+  .hotel-gallery-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
+
+  .hotel-gallery-card .card-body {
+    background: #ffffff;
+    padding: 1rem 1.1rem;
+  }
+
+  .hotel-gallery-card .card-text {
+    margin: 0;
+    color: #4e5b73;
+    font-size: 0.95rem;
+  }
+
+  .hotel-section {
+    margin-top: 2rem;
+  }
+
+  .hotel-section-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #dc3545;
+    margin-bottom: 1rem;
+  }
+
+  .hotel-meta,
+  .hotel-list,
+  .hotel-table-wrap {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 14px 36px rgba(8, 21, 58, 0.07);
+    padding: 1.5rem;
+  }
+
+  .hotel-meta p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: #24314f;
+  }
+
+  .hotel-meta p:last-child {
+    margin-bottom: 0;
+  }
+
+  .hotel-list {
+    padding-left: 2.75rem;
+  }
+
+  .hotel-list li {
+    margin-bottom: 0.85rem;
+    line-height: 1.7;
+    color: #24314f;
+  }
+
+  .hotel-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .hotel-link {
+    color: #0d6efd;
+    word-break: break-word;
+  }
+
+  .hotel-table-wrap {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .hotel-table {
+    margin-bottom: 0;
+  }
+
+  .hotel-table thead th {
+    background: #08153a;
+    color: #ffffff;
+    font-weight: 600;
+    border-bottom: 0;
+    vertical-align: middle;
+  }
+
+  .hotel-table td {
+    vertical-align: middle;
+    color: #24314f;
+  }
+
+  .hotel-table tbody tr:nth-child(even) {
+    background: #f8faff;
+  }
+
+  .hotel-table strong {
+    color: #08153a;
+  }
+
+  @media (max-width: 767.98px) {
+    .hotel-copy {
+      padding: 1.5rem;
+    }
+
+    .hotel-name {
+      font-size: 1.75rem;
+    }
+
+    .hotel-gallery-card img {
+      height: 220px;
+    }
+
+    .hotel-meta,
+    .hotel-list {
+      padding: 1.25rem;
+    }
+
+    .hotel-list {
+      padding-left: 2.2rem;
+    }
+  }
+
+  .registration-page {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at top right, rgba(13, 110, 253, 0.12), transparent 28%),
+      linear-gradient(180deg, #f4f7fc 0%, #ffffff 320px);
+  }
+
+  .registration-main {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .registration-shell {
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 20px 48px rgba(8, 21, 58, 0.08);
+    overflow: hidden;
+  }
+
+  .registration-copy,
+  .registration-form-pane {
+    padding: 2rem;
+  }
+
+  .registration-copy {
+    background: linear-gradient(160deg, #08153a 0%, #0d2a68 100%);
+    color: #ffffff;
+    height: 100%;
+  }
+
+  .registration-kicker {
+    display: inline-block;
+    margin-bottom: 0.9rem;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .registration-copy h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    letter-spacing: 0.02em;
+  }
+
+  .registration-copy p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .registration-points {
+    margin: 1.5rem 0 0;
+    padding-left: 1.25rem;
+  }
+
+  .registration-points li {
+    margin-bottom: 0.75rem;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.92);
+  }
+
+  .registration-form-pane h2 {
+    margin-bottom: 0.6rem;
+    color: #08153a;
+    font-size: 1.7rem;
+  }
+
+  .registration-form-pane p {
+    color: #53627d;
+    margin-bottom: 1.5rem;
+  }
+
+  .registration-form .form-label {
+    font-weight: 600;
+    color: #24314f;
+  }
+
+  .registration-form .form-control {
+    border-radius: 14px;
+    border: 1px solid #d8deea;
+    padding: 0.8rem 0.95rem;
+    box-shadow: none;
+  }
+
+  .registration-form .form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+  }
+
+  .registration-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.4rem;
+    color: #6a7690;
+    font-size: 0.92rem;
+    flex-wrap: wrap;
+  }
+
+  .registration-submit {
+    min-width: 180px;
+    padding: 0.85rem 1.25rem;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+
+  .registration-status {
+    display: none;
+    margin-top: 1rem;
+    border-radius: 14px;
+    padding: 0.95rem 1rem;
+    font-weight: 600;
+  }
+
+  .registration-status.is-visible {
+    display: block;
+  }
+
+  @media (max-width: 767.98px) {
+    .registration-copy,
+    .registration-form-pane {
+      padding: 1.5rem;
+    }
+
+    .registration-copy h1 {
+      font-size: 1.7rem;
+    }
+
+    .registration-submit {
+      width: 100%;
+    }
+  }
   
+.btn-orange {
+  background-color: #fd7e14;
+  color: #fff;
+  border: none;
+}
+
+.btn-orange:hover {
+  background-color: #e96b02;
+  color: #fff;
+}
+
+.btn-red {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+}
+
+.btn-red:hover {
+  background-color: #bb2d3b;
+  color: #fff;
+}

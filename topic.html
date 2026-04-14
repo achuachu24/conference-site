@@ -5,14 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>IEEE USYS 2026 - Conference</title>
 
-  <!-- Bootstrap CSS (CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- 自定义样式 -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    .topic-main {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      text-align: center;
+    }
+
+    .topic-main h1 {
+      font-weight: bold;
+      margin-bottom: 1.875rem;
+    }
+
+    .topic-list {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 <body>
-  <!-- ===== 导航栏 ===== -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="#">IEEE USYS 2026</a>
@@ -26,7 +40,7 @@
           <li class="nav-item"><a class="nav-link" href="program.html">Program</a></li>
           <li class="nav-item"><a class="nav-link" href="topic.html">Topic</a></li>
           <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Hotel</a></li>
+          <li class="nav-item"><a class="nav-link" href="hotel.html">Hotel</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
 
@@ -39,14 +53,12 @@
     </div>
   </nav>
 
-   <!-- ===== 顶部大横幅（会议标题和图片） ===== -->
-  <header class="site-header py-4 mt-5">
+  <header class="site-header py-4">
     <div class="container d-flex align-items-center">
       <div class="flex-grow-1">
         <h1>IEEE</h1>
         <h4>IEEE 11TH INTERNATIONAL CONFERENCE ON UNDERWATER SYSTEM TECHNOLOGY: THEORY AND APPLICATIONS</h4>
         <p>16th to 18th October 2026, Shanghai, China</p>
-        
       </div>
       <div class="header-images d-none d-md-block">
         <img src="img/1.jpg" alt="img1" class="rounded img-fluid me-2">
@@ -55,50 +67,25 @@
     </div>
   </header>
 
-<!-- 引入 Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<style>
-  body {
-    padding-top: 50px; /* 顶部间距 */
-    text-align: center; /* 页面居中 */
-  }
-  h1 {
-    font-weight: bold; /* 加粗 */
-    margin-bottom: 30px; /* 标题和图片间距 */
-  }
-  img {
-    max-width: 80%; /* 图片自适应屏幕宽度 */
-    height: auto;
-    border-radius: 5px; /* 可选圆角 */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 可选阴影 */
-  }
-</style>
-</head>
-<body>
-<br><br><br>
+  <main class="container topic-main">
+    <h1>topic</h1>
 
+    <p class="fs-5 topic-list">
+      1. Underwater Vehicle Technology<br>
+      ROV, AUV, Hybrid,Docking and retrieval system<br><br>
+      2. Artificial Intelligent Subsea System<br>
+      Vision system for underwater application, Adaptive path planning<br><br>
+      3. Control Systems<br>
+      Underwater robotic arm, SLAM, Intelligent control architecture<br><br>
+      4. Software Engineering and Simulation<br>
+      Virtual collaborative simulation software, Virtual environment<br><br>
+      5. Ocean Science<br>
+      Ocean structure, Marine biology, Climate change<br><br>
+      6. Subsea Applications<br>
+      Underwater communicationsystem, Renewable energy sources<br><br>
+    </p>
+  </main>
 
-
-<div class="container">
-  <h1>topic</h1>
-    
-<br>
-<p class="fs-5"> <!-- 剩下文字放大一号 -->
-  1. Underwater Vehicle Technology<br>
-   ROV, AUV, Hybrid,Docking and retrieval system<br><br>
-  2. Artificial Intelligent Subsea System<br>
-   Vision system for underwater application, Adaptive path planning<br><br>
-  3. Control Systems<br>
-   Underwater robotic arm, SLAM, Intelligent control architecture<br><br>
-  4. Software Engineering and Simulation<br>
-   Virtual collaborative simulation software, Virtual environment<br><br>
-  5. Ocean Science<br>
-   Ocean structure, Marine biology, Climate change<br><br>
-  6. Subsea Applications<br>
-  Underwater communicationsystem, Renewable energy sources<br><br>
-</p>
-
-<!-- 引入 Bootstrap JS（可选，如果有交互需求） -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

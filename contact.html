@@ -5,14 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>IEEE USYS 2026 - Conference</title>
 
-  <!-- Bootstrap CSS (CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- 自定义样式 -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    .contact-main {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      text-align: center;
+    }
+
+    .contact-main h1 {
+      font-weight: bold;
+      margin-bottom: 1.875rem;
+    }
+
+    .contact-panel {
+      margin-top: 1.25rem;
+    }
+
+    .contact-label {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 0.3125rem;
+    }
+
+    .contact-panel p {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
-  <!-- ===== 导航栏 ===== -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="#">IEEE USYS 2026</a>
@@ -26,7 +50,7 @@
           <li class="nav-item"><a class="nav-link" href="program.html">Program</a></li>
           <li class="nav-item"><a class="nav-link" href="topic.html">Topic</a></li>
           <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Hotel</a></li>
+          <li class="nav-item"><a class="nav-link" href="hotel.html">Hotel</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
 
@@ -39,7 +63,6 @@
     </div>
   </nav>
 
-   <!-- ===== 顶部大横幅（可放会议标题和图片） ===== -->
   <header class="site-header py-4">
     <div class="container d-flex align-items-center">
       <div class="flex-grow-1">
@@ -49,62 +72,27 @@
         <div class="badge theme-badge">Theme: Marine Robotics and Beyond: Toward Autonomous Ocean Futures</div>
       </div>
       <div class="header-images d-none d-md-block">
-        <!-- 外部图片示例（可换成本地 images/ 下的图片） -->
         <img src="img/1.jpg" alt="img1" class="rounded img-fluid me-2">
         <img src="img/2.jpg" alt="img2" class="rounded img-fluid">
       </div>
     </div>
   </header>
 
+  <main class="container contact-main">
+    <h1>Contact Us</h1>
 
+    <div class="contact-panel">
+      <p class="contact-label">Secretariat of USYS 2026</p>
+      <p>University of Shanghai for Science and Technology</p>
+      <p>No. 516, Gongjun Road, Yangpu District, Shanghai</p>
+    </div>
 
-<!-- 引入 Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<style>
-  body {
-    padding-top: 50px; /* 顶部间距 */
-    text-align: center; /* 页面居中 */
-  }
-  h1 {
-    font-weight: bold; /* 加粗 */
-    margin-bottom: 30px; /* 标题和图片间距 */
-  }
-  img {
-    max-width: 80%; /* 图片自适应屏幕宽度 */
-    height: auto;
-    border-radius: 5px; /* 可选圆角 */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 可选阴影 */
-  }
-</style>
-</head>
-<body>
-<br><br><br>
-<div class="container">
-  <h1>Contact Us</h1><br>
+    <div class="contact-panel">
+      <p class="contact-label">Email:</p>
+      <p>USYS2026@163.com</p>
+    </div>
+  </main>
 
-
-  <!-- 居中文字段 -->
-  <div class="text-center" style="margin-top: 20px;">
-    <p style="font-weight: bold; font-size: 1.1rem; margin-bottom: 5px;">
-      Secretariat of USYS’26
-    </p>
-    <p style="font-size: 0.9rem; margin: 0;">University of Shanghai for Science and Technology</p>
-    <p style="font-size: 0.9rem; margin: 0;">No. 516, Gongjun Road, Yangpu District, Shanghai</p>
-  
-
-
- <div class="text-center" style="margin-top: 20px;">
-    <p style="font-weight: bold; font-size: 1.1rem; margin-bottom: 5px;">
-      Email:
-    </p>
-    <p style="font-size: 0.9rem; margin: 0;"> USYS2026@163.com</p>
-
-   
-</div>
-<br><br><br><br><br><br>
-<!-- 引入 Bootstrap JS（可选，如果有交互需求） -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-

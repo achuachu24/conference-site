@@ -11,3 +11,7 @@ Thumbs.db
 
 # 如果以后你用 node.js 或其他框架，也可以加上 node_modules/
 node_modules/
+
+# Runtime database files
+data/*.db
+data/*.sqlite
