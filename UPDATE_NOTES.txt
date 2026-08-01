@@ -1,0 +1,11 @@
+USYS 2026 website update
+
+Updated items only:
+1. Conference dates changed to 18–20 December 2026.
+2. Conference location changed to Penang, Malaysia.
+3. Added the force-majeure/online-participation notice to the homepage.
+4. Homepage organizers changed to IEEE OES Malaysia Chapter, Universiti Sains Malaysia, and USST.
+5. Important dates changed to 12 October, 9 November, and 27 November 2026.
+6. Program images retain the original session structure but use 18–20 December and Penang, Malaysia.
+7. Hotel navigation, homepage Hotel button, hotel page, and hotel images removed.
+8. Other committee, topic, registration, submission, and contact content left unchanged except the shared header date/location and Hotel navigation removal.
