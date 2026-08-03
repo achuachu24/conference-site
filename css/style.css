@@ -92,202 +92,238 @@ body > .navbar + .site-header {
     margin-top: 30px;
   }
 
+  /* ===== Venue and nearby hotels page ===== */
   .hotel-page {
-    background: linear-gradient(180deg, #f3f6fb 0%, #ffffff 260px);
+    min-height: 100vh;
+    background: #ffffff;
   }
 
-  .hotel-main {
+  .venue-main {
     margin-top: 2rem;
     margin-bottom: 3rem;
   }
 
-  .hotel-hero {
-    background: #ffffff;
-    border-radius: 24px;
-    box-shadow: 0 18px 48px rgba(8, 21, 58, 0.08);
-    overflow: hidden;
+  .venue-section + .venue-section {
+    margin-top: 3.5rem;
   }
 
-  .hotel-copy {
-    padding: 2rem;
+  .venue-heading {
+    margin-bottom: 1.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #b77900;
   }
 
-  .hotel-page-title {
+  .venue-heading h1,
+  .venue-heading h2 {
     margin-bottom: 0.5rem;
-    color: #0d6efd;
-    font-size: 0.95rem;
+    color: #0b376f;
+    font-size: clamp(2rem, 4vw, 2.75rem);
     font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
   }
 
-  .hotel-eyebrow {
-    display: inline-block;
-    margin-bottom: 0.85rem;
-    padding: 0.35rem 0.75rem;
-    border-radius: 999px;
-    background: rgba(13, 110, 253, 0.1);
-    color: #0b4aa8;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
-
-  .hotel-name {
-    font-size: 2.15rem;
-    font-weight: 700;
-    color: #08153a;
-    margin-bottom: 1rem;
-  }
-
-  .hotel-summary {
-    font-size: 1rem;
-    line-height: 1.75;
-    color: #32415f;
+  .venue-heading p {
     margin-bottom: 0;
+    color: #536176;
+    font-size: 1.05rem;
   }
 
-  .hotel-intro-note {
-    margin-bottom: 0;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #32415f;
-  }
-
-  .hotel-summary .cn-text,
-  .hotel-meta .cn-text,
-  .hotel-table .cn-text,
-  .hotel-list .cn-text {
-    display: block;
-    margin-top: 0.25rem;
-    color: #5e6b85;
-  }
-
-  .hotel-gallery-card {
-    height: 100%;
-    border: 0;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 12px 30px rgba(8, 21, 58, 0.08);
-  }
-
-  .hotel-gallery-card img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-  }
-
-  .hotel-gallery-card .card-body {
-    background: #ffffff;
-    padding: 1rem 1.1rem;
-  }
-
-  .hotel-gallery-card .card-text {
+  .venue-feature-card,
+  .venue-mini-gallery figure,
+  .venue-attraction-gallery figure {
     margin: 0;
-    color: #4e5b73;
+  }
+
+  .venue-feature-card img {
+    width: 100%;
+    aspect-ratio: 1.95 / 1;
+    object-fit: cover;
+    border: 1px solid #d8e1ee;
+  }
+
+  .venue-feature-card figcaption,
+  .venue-mini-gallery figcaption,
+  .venue-attraction-gallery figcaption {
+    padding: 0.45rem 0.5rem;
+    border: 1px solid #b8cbea;
+    border-top: 0;
+    background: #eef5ff;
+    color: #0b376f;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .venue-mini-gallery img {
+    width: 100%;
+    height: 137px;
+    object-fit: cover;
+    border: 1px solid #d8e1ee;
+  }
+
+  .venue-mini-gallery figcaption {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.86rem;
+  }
+
+  .venue-details h2 {
+    color: #0b376f;
+    font-size: 1.65rem;
+    font-weight: 700;
+  }
+
+  .venue-details address {
+    margin: 1rem 0 1.5rem;
+    color: #202b3f;
+    font-size: 1.3rem;
+    font-style: normal;
+    line-height: 1.45;
+  }
+
+  .venue-details h3 {
+    margin-bottom: 1rem;
+    color: #b77900;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .venue-access-list {
+    margin-bottom: 1.4rem;
+    padding-left: 1.25rem;
+    color: #202b3f;
+    line-height: 1.55;
+  }
+
+  .travel-reference {
+    padding: 1rem 1.1rem;
+    border: 2px solid #b8cbea;
+    background: #fff8e9;
+  }
+
+  .travel-reference h4 {
+    margin-bottom: 0.5rem;
+    color: #202b3f;
+    font-size: 1.05rem;
+  }
+
+  .travel-reference p {
+    margin-bottom: 0.25rem;
+    color: #202b3f;
+    line-height: 1.45;
+  }
+
+  .travel-reference p:last-child {
+    margin-bottom: 0;
+  }
+
+  .venue-attraction-gallery img {
+    width: 100%;
+    height: 195px;
+    object-fit: cover;
+    border: 1px solid #d8e1ee;
+  }
+
+  .venue-attraction-gallery figcaption {
     font-size: 0.95rem;
   }
 
-  .hotel-section {
+  .nearby-hotel-card {
+    height: 100%;
+    padding: 1rem 1.15rem;
+    border: 1px solid #b8cbea;
+    background: #f8fbff;
+  }
+
+  .nearby-hotel-card h3 {
+    margin-bottom: 0.45rem;
+    color: #202b3f;
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+
+  .nearby-hotel-card h3 span {
+    white-space: nowrap;
+    color: #0b376f;
+    letter-spacing: 0.05em;
+  }
+
+  .nearby-hotel-card p {
+    margin-bottom: 0.2rem;
+    color: #202b3f;
+    line-height: 1.45;
+  }
+
+  .nearby-hotel-card a {
+    color: #0b5ed7;
+    text-decoration: none;
+  }
+
+  .nearby-hotel-card a:hover {
+    text-decoration: underline;
+  }
+
+  .hotel-rating-note {
     margin-top: 2rem;
-  }
-
-  .hotel-section-title {
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: #dc3545;
-    margin-bottom: 1rem;
-  }
-
-  .hotel-meta,
-  .hotel-list,
-  .hotel-table-wrap {
-    background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 14px 36px rgba(8, 21, 58, 0.07);
-    padding: 1.5rem;
-  }
-
-  .hotel-meta p {
-    margin-bottom: 1rem;
-    line-height: 1.7;
-    color: #24314f;
-  }
-
-  .hotel-meta p:last-child {
     margin-bottom: 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #b8cbea;
+    color: #536176;
+    font-size: 0.86rem;
   }
 
-  .hotel-list {
-    padding-left: 2.75rem;
-  }
+  @media (max-width: 991.98px) {
+    .venue-mini-gallery img {
+      height: 160px;
+    }
 
-  .hotel-list li {
-    margin-bottom: 0.85rem;
-    line-height: 1.7;
-    color: #24314f;
-  }
-
-  .hotel-list li:last-child {
-    margin-bottom: 0;
-  }
-
-  .hotel-link {
-    color: #0d6efd;
-    word-break: break-word;
-  }
-
-  .hotel-table-wrap {
-    padding: 0;
-    overflow: hidden;
-  }
-
-  .hotel-table {
-    margin-bottom: 0;
-  }
-
-  .hotel-table thead th {
-    background: #08153a;
-    color: #ffffff;
-    font-weight: 600;
-    border-bottom: 0;
-    vertical-align: middle;
-  }
-
-  .hotel-table td {
-    vertical-align: middle;
-    color: #24314f;
-  }
-
-  .hotel-table tbody tr:nth-child(even) {
-    background: #f8faff;
-  }
-
-  .hotel-table strong {
-    color: #08153a;
+    .venue-attraction-gallery img {
+      height: 180px;
+    }
   }
 
   @media (max-width: 767.98px) {
-    .hotel-copy {
-      padding: 1.5rem;
+    .venue-main {
+      margin-top: 1.5rem;
     }
 
-    .hotel-name {
-      font-size: 1.75rem;
+    .venue-section + .venue-section {
+      margin-top: 2.5rem;
     }
 
-    .hotel-gallery-card img {
-      height: 220px;
+    .venue-heading h1,
+    .venue-heading h2 {
+      font-size: 1.85rem;
     }
 
-    .hotel-meta,
-    .hotel-list {
-      padding: 1.25rem;
+    .venue-feature-card img {
+      aspect-ratio: 1.55 / 1;
     }
 
-    .hotel-list {
-      padding-left: 2.2rem;
+    .venue-mini-gallery img {
+      height: 105px;
+    }
+
+    .venue-mini-gallery figcaption {
+      min-height: 56px;
+      padding: 0.35rem 0.25rem;
+      font-size: 0.75rem;
+    }
+
+    .venue-details address {
+      font-size: 1.1rem;
+    }
+
+    .venue-attraction-gallery img {
+      height: 145px;
+    }
+
+    .venue-attraction-gallery figcaption {
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
     }
   }
 

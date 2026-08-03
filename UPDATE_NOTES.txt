@@ -9,3 +9,8 @@ Updated items only:
 6. Program images retain the original session structure but use 18–20 December and Penang, Malaysia.
 7. Hotel navigation, homepage Hotel button, hotel page, and hotel images removed.
 8. Other committee, topic, registration, submission, and contact content left unchanged except the shared header date/location and Hotel navigation removal.
+
+Venue and hotel update:
+- Rebuilt hotel.html as a combined SAINS@USM venue and nearby hotels page.
+- Added venue address, access distances, six nearby hotel listings, and the supplied venue/George Town images.
+- Restored the Hotel navigation link across all pages and the Hotel button on the homepage.
