@@ -1,79 +1,922 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>IEEE USYS 2026 - Conference</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>IEEE USYS 2026 - Conference Program</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- 网站原有 CSS -->
   <link rel="stylesheet" href="css/style.css" />
 
   <style>
+    /* ===== Program 页面专用样式 ===== */
+
     .program-main {
-      padding-top: 3rem;
-      padding-bottom: 3rem;
+      padding-top: 45px;
+      padding-bottom: 60px;
+    }
+
+    .program-title {
+      text-align: center;
+      font-weight: 700;
+      color: #0b3d75;
+      margin-bottom: 10px;
+    }
+
+    .program-subtitle {
+      text-align: center;
+      color: #555;
+      margin-bottom: 35px;
+    }
+
+    /* 会场信息 */
+    .venue-box {
+      max-width: 1000px;
+      margin: 0 auto 40px auto;
+      padding: 20px 25px;
+      border-left: 5px solid #0d6efd;
+      background: #f5f8fc;
+      text-align: left;
+    }
+
+    .venue-box h5 {
+      color: #0b3d75;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .venue-box p {
+      margin-bottom: 4px;
+    }
+
+    /* 每一天议程 */
+    .program-day {
+      max-width: 1100px;
+      margin: 0 auto 45px auto;
+    }
+
+    .program-day-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #0b3d75;
+      margin-bottom: 12px;
+      text-align: left;
+    }
+
+    .program-table {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+      background: #fff;
+    }
+
+    .program-table th,
+    .program-table td {
+      border: 1px solid #555;
+      padding: 11px 12px;
+      vertical-align: middle;
+    }
+
+    .program-table th {
+      background: #eef4fb;
+      text-align: center;
+      font-weight: 700;
+      color: #163d6b;
+    }
+
+    .time-column {
+      width: 20%;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .schedule-column {
+      width: 50%;
       text-align: center;
     }
 
-    .program-main img {
-      max-width: 80%;
-      height: auto;
-      border-radius: 5px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    .address-column {
+      width: 30%;
+      text-align: center;
     }
 
-    .program-main img + img {
-      margin-top: 2.5rem;
+    .venue-address {
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .venue-address strong {
+      color: #0b3d75;
+    }
+
+    .tba {
+      color: #777;
+    }
+
+    /* 手机适配 */
+    @media (max-width: 768px) {
+
+      .program-main {
+        padding-top: 25px;
+      }
+
+      .program-table {
+        font-size: 0.82rem;
+      }
+
+      .program-table th,
+      .program-table td {
+        padding: 7px 5px;
+      }
+
+      .time-column {
+        width: 25%;
+      }
+
+      .schedule-column {
+        width: 45%;
+      }
+
+      .address-column {
+        width: 30%;
+      }
+
+      .venue-address {
+        font-size: 0.78rem;
+      }
+
+      .program-title {
+        font-size: 1.7rem;
+      }
     }
   </style>
 </head>
+
+
 <body>
+
+  <!-- ===== 导航栏 ===== -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">IEEE USYS 2026</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+
+      <a class="navbar-brand" href="index.html">
+        IEEE USYS 2026
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="mainNav">
+
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="committee.html">Committee</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="program.html">Program</a></li>
-          <li class="nav-item"><a class="nav-link" href="topic.html">Topic</a></li>
-          <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
-          <li class="nav-item"><a class="nav-link" href="hotel.html">Hotel</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="committee.html">Committee</a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="program.html"
+            >
+              Program
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="topic.html">Topic</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="registration.html">
+              Registration
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="hotel.html">Hotel</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+
         </ul>
 
+
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Welcome, Visitor</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
-          <li class="nav-item"><a class="nav-link" href="registration.html">Register</a></li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Welcome, Visitor</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="registration.html">Register</a>
+          </li>
+
         </ul>
+
       </div>
     </div>
   </nav>
 
+
+  <!-- ===== 顶部会议横幅 ===== -->
   <header class="site-header py-4">
+
     <div class="container d-flex align-items-center">
+
       <div class="flex-grow-1">
+
         <h1>IEEE</h1>
-        <h4>IEEE 11TH INTERNATIONAL CONFERENCE ON UNDERWATER SYSTEM TECHNOLOGY: THEORY AND APPLICATIONS</h4>
-        <p>18–20 December 2026, Penang, Malaysia</p>
+
+        <h4>
+          IEEE 11TH INTERNATIONAL CONFERENCE ON UNDERWATER SYSTEM
+          TECHNOLOGY: THEORY AND APPLICATIONS
+        </h4>
+
+        <p>
+          18–20 December 2026,
+          SAINS@USM Campus,
+          Penang, Malaysia
+        </p>
+
       </div>
+
+
       <div class="header-images d-none d-md-block">
-        <img src="img/1.jpg" alt="img1" class="rounded img-fluid me-2">
-        <img src="img/2.jpg" alt="img2" class="rounded img-fluid">
+
+        <img
+          src="img/1.jpg"
+          alt="Underwater vehicle"
+          class="rounded img-fluid me-2"
+        >
+
+        <img
+          src="img/2.jpg"
+          alt="Underwater system"
+          class="rounded img-fluid"
+        >
+
       </div>
+
     </div>
+
   </header>
 
+
+  <!-- ========================================================= -->
+  <!--                    Conference Program                     -->
+  <!-- ========================================================= -->
+
   <main class="container program-main">
-    <img src="img/program.png" alt="Conference program schedule">
-    <br><br>
-    <img src="img/program2.png" alt="Conference program continuation">
+
+    <h1 class="program-title">
+      Conference Program
+    </h1>
+
+    <p class="program-subtitle">
+      IEEE USYS 2026 · 18–20 December 2026
+    </p>
+
+
+    <!-- ===== Conference Venue ===== -->
+
+    <div class="venue-box">
+
+      <h5>Conference Venue</h5>
+
+      <p>
+        <strong>SAINS@USM Campus</strong>
+      </p>
+
+      <p>
+        Persiaran Bukit Jambul
+      </p>
+
+      <p>
+        11900 Bayan Lepas, Pulau Pinang, Malaysia
+      </p>
+
+      <p class="mt-3">
+        <a href="hotel.html">
+          View venue and nearby hotel information →
+        </a>
+      </p>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!--                 18 December 2026                  -->
+    <!-- ================================================= -->
+
+    <section class="program-day">
+
+      <h2 class="program-day-title">
+        18 December 2026
+      </h2>
+
+
+      <div class="table-responsive">
+
+        <table class="program-table">
+
+          <thead>
+
+            <tr>
+
+              <th class="time-column">
+                Time
+              </th>
+
+              <th class="schedule-column">
+                Schedule
+              </th>
+
+              <th class="address-column">
+                Address
+              </th>
+
+            </tr>
+
+          </thead>
+
+
+          <tbody>
+
+            <tr>
+
+              <td class="time-column">
+                10:00–17:00
+              </td>
+
+              <td class="schedule-column">
+                Conference Registration and Check-in
+              </td>
+
+              <td class="address-column">
+
+                <div class="venue-address">
+
+                  <strong>
+                    SAINS@USM Campus
+                  </strong>
+
+                  <br>
+
+                  Persiaran Bukit Jambul
+
+                  <br>
+
+                  11900 Bayan Lepas
+
+                  <br>
+
+                  Pulau Pinang, Malaysia
+
+                </div>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!--                 19 December 2026                  -->
+    <!-- ================================================= -->
+
+    <section class="program-day">
+
+      <h2 class="program-day-title">
+        19 December 2026
+      </h2>
+
+
+      <div class="table-responsive">
+
+        <table class="program-table">
+
+          <thead>
+
+            <tr>
+
+              <th class="time-column">
+                Time
+              </th>
+
+              <th class="schedule-column">
+                Schedule
+              </th>
+
+              <th class="address-column">
+                Address
+              </th>
+
+            </tr>
+
+          </thead>
+
+
+          <tbody>
+
+            <!-- Morning session -->
+
+            <tr>
+
+              <td class="time-column">
+                08:30–09:00
+              </td>
+
+              <td class="schedule-column">
+                Opening Ceremony
+              </td>
+
+              <td
+                class="address-column"
+                rowspan="7"
+              >
+
+                <div class="venue-address">
+
+                  <strong>
+                    SAINS@USM Campus
+                  </strong>
+
+                  <br>
+
+                  Persiaran Bukit Jambul
+
+                  <br>
+
+                  11900 Bayan Lepas
+
+                  <br>
+
+                  Pulau Pinang, Malaysia
+
+                </div>
+
+              </td>
+
+            </tr>
+
+
+            <tr>
+              <td class="time-column">
+                09:00–09:20
+              </td>
+
+              <td class="schedule-column">
+                Group Photo
+              </td>
+            </tr>
+
+
+            <tr>
+              <td class="time-column">
+                09:20–09:55
+              </td>
+
+              <td class="schedule-column">
+                Plenary Lecture (1)
+              </td>
+            </tr>
+
+
+            <tr>
+              <td class="time-column">
+                09:55–10:30
+              </td>
+
+              <td class="schedule-column">
+                Plenary Lecture (2)
+              </td>
+            </tr>
+
+
+            <tr>
+              <td class="time-column">
+                10:30–10:50
+              </td>
+
+              <td class="schedule-column">
+                Tea Break
+              </td>
+            </tr>
+
+
+            <tr>
+              <td class="time-column">
+                10:50–11:25
+              </td>
+
+              <td class="schedule-column">
+                Plenary Lecture (3)
+              </td>
+            </tr>
+
+
+            <tr>
+              <td class="time-column">
+                11:25–12:00
+              </td>
+
+              <td class="schedule-column">
+                Plenary Lecture (4)
+              </td>
+            </tr>
+
+
+            <!-- Lunch -->
+
+            <tr>
+
+              <td class="time-column">
+                12:10–13:30
+              </td>
+
+              <td class="schedule-column">
+                Lunch and Afternoon Break
+              </td>
+
+              <td class="address-column tba">
+                —
+              </td>
+
+            </tr>
+
+
+            <!-- Afternoon session -->
+
+            <tr>
+
+              <td class="time-column">
+                14:00–15:45
+              </td>
+
+              <td class="schedule-column">
+                Parallel Session (2 Sessions Planned)
+              </td>
+
+              <td
+                class="address-column"
+                rowspan="3"
+              >
+
+                <div class="venue-address">
+
+                  <strong>
+                    SAINS@USM Campus
+                  </strong>
+
+                  <br>
+
+                  Persiaran Bukit Jambul
+
+                  <br>
+
+                  11900 Bayan Lepas
+
+                  <br>
+
+                  Pulau Pinang, Malaysia
+
+                </div>
+
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time-column">
+                15:45–16:15
+              </td>
+
+              <td class="schedule-column">
+                Tea Break
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time-column">
+                16:15–18:00
+              </td>
+
+              <td class="schedule-column">
+                Parallel Session (2 Sessions Planned)
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time-column">
+                18:00–18:30
+              </td>
+
+              <td class="schedule-column">
+                Break
+              </td>
+
+              <td class="address-column tba">
+                —
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time-column">
+                18:30–21:00
+              </td>
+
+              <td class="schedule-column">
+                Awards &amp; Banquet
+              </td>
+
+              <td class="address-column tba">
+                —
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!--                 20 December 2026                  -->
+    <!-- ================================================= -->
+
+    <section class="program-day">
+
+      <h2 class="program-day-title">
+        20 December 2026
+      </h2>
+
+
+      <div class="table-responsive">
+
+        <table class="program-table">
+
+          <thead>
+
+            <tr>
+
+              <th class="time-column">
+                Time
+              </th>
+
+              <th class="schedule-column">
+                Schedule
+              </th>
+
+              <th class="address-column">
+                Address
+              </th>
+
+            </tr>
+
+          </thead>
+
+
+          <tbody>
+
+            <!-- Morning -->
+
+            <tr>
+
+              <td class="time-column">
+                08:30–10:15
+              </td>
+
+              <td class="schedule-column">
+                Parallel Oral Sessions
+                (5 Sessions Planned)
+              </td>
+
+              <td
+                class="address-column"
+                rowspan="3"
+              >
+
+                <div class="venue-address">
+
+                  <strong>
+                    SAINS@USM Campus
+                  </strong>
+
+                  <br>
+
+                  Persiaran Bukit Jambul
+
+                  <br>
+
+                  11900 Bayan Lepas
+
+                  <br>
+
+                  Pulau Pinang, Malaysia
+
+                </div>
+
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time-column">
+                10:15–10:30
+              </td>
+
+              <td class="schedule-column">
+                Tea Break
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time-column">
+                10:30–12:15
+              </td>
+
+              <td class="schedule-column">
+                Parallel Oral Sessions
+                (5 Sessions Planned)
+              </td>
+
+            </tr>
+
+
+            <!-- Lunch -->
+
+            <tr>
+
+              <td class="time-column">
+                12:20–13:30
+              </td>
+
+              <td class="schedule-column">
+                Lunch and Afternoon Break
+              </td>
+
+              <td class="address-column tba">
+                —
+              </td>
+
+            </tr>
+
+
+            <!-- Afternoon -->
+
+            <tr>
+
+              <td class="time-column">
+                14:00–15:45
+              </td>
+
+              <td class="schedule-column">
+                Parallel Oral Sessions
+                (5 Sessions Planned)
+              </td>
+
+              <td
+                class="address-column"
+                rowspan="3"
+              >
+
+                <div class="venue-address">
+
+                  <strong>
+                    SAINS@USM Campus
+                  </strong>
+
+                  <br>
+
+                  Persiaran Bukit Jambul
+
+                  <br>
+
+                  11900 Bayan Lepas
+
+                  <br>
+
+                  Pulau Pinang, Malaysia
+
+                </div>
+
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time-column">
+                15:45–16:15
+              </td>
+
+              <td class="schedule-column">
+                Tea Break
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td class="time-column">
+                16:15–18:00
+              </td>
+
+              <td class="schedule-column">
+                Parallel Oral Sessions
+                (5 Sessions Planned)
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ===== Footer ===== -->
+
+  <footer class="bg-dark text-white py-3">
+
+    <div class="container text-center small">
+
+      © 2026 IEEE USYS — Conference Website
+
+    </div>
+
+  </footer>
+
+
+  <!-- Bootstrap JS -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+  </script>
+
 </body>
+
 </html>
