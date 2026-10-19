@@ -22,7 +22,6 @@
           <li class="nav-item"><a class="nav-link" href="program.html">Program</a></li>
           <li class="nav-item"><a class="nav-link" href="topic.html">Topic</a></li>
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="registration.html">Registration</a></li>
-          <li class="nav-item"><a class="nav-link" href="hotel.html">Hotel</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
 
@@ -41,7 +40,7 @@
         <h1>IEEE</h1>
         <h4>IEEE 11TH INTERNATIONAL CONFERENCE ON UNDERWATER SYSTEM TECHNOLOGY: THEORY AND APPLICATIONS</h4>
         <p>18–20 December 2026, Penang, Malaysia</p>
-        <div class="theme-badge">Registration Upload</div>
+        <div class="theme-badge">Registration &amp; Payment</div>
       </div>
       <div class="header-images d-none d-md-block">
         <img src="img/1.jpg" alt="USYS 2026 banner" class="rounded img-fluid me-2">
@@ -51,14 +50,109 @@
   </header>
 
   <main class="container registration-main">
-    <section class="registration-shell">
+    <section class="registration-hero-card" id="registration-info">
+      <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
+        <div>
+          <span class="registration-kicker registration-kicker-light">USYS 2026 Registration</span>
+          <h1 class="mb-2">Registration Fees &amp; Payment Information</h1>
+          <p class="mb-0">Please review the registration fee and bank payment information before uploading your payment record.</p>
+        </div>
+        <div class="registration-jump-links" aria-label="Registration quick links">
+          <a class="btn btn-outline-primary btn-sm" href="#fees">Registration Fees</a>
+          <a class="btn btn-outline-primary btn-sm" href="#payment-info">Payment Information</a>
+          <a class="btn btn-danger btn-sm" href="#payment-upload">Upload Payment Record</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="registration-info-card" id="fees">
+      <div class="registration-section-heading">
+        <div>
+          <span class="registration-section-eyebrow">Conference Registration</span>
+          <h2>Conference Fees</h2>
+        </div>
+        <div class="registration-exchange-rate">Exchange rate: 1 USD ≈ 4 MYR</div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table registration-fee-table align-middle mb-0">
+          <thead>
+            <tr>
+              <th scope="col">Participant</th>
+              <th scope="col">Early Bird Price<br><span>(Before 27th Nov.)</span></th>
+              <th scope="col">Normal Price<br><span>(After 27th Nov.)</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>IEEE Regular Member</strong></td>
+              <td>MYR 1480 / USD 370</td>
+              <td>MYR 1680 / USD 420</td>
+            </tr>
+            <tr>
+              <td><strong>Non-IEEE Member</strong></td>
+              <td>MYR 1760 / USD 440</td>
+              <td>MYR 1960 / USD 490</td>
+            </tr>
+            <tr>
+              <td><strong>IEEE Student</strong></td>
+              <td>MYR 880 / USD 220</td>
+              <td>MYR 1080 / USD 270</td>
+            </tr>
+            <tr>
+              <td><strong>Non-IEEE Student</strong></td>
+              <td>MYR 1080 / USD 270</td>
+              <td>MYR 1280 / USD 320</td>
+            </tr>
+            <tr>
+              <td><strong>Non-author of the thesis</strong></td>
+              <td colspan="2">MYR 600 / USD 150</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="registration-info-card" id="payment-info">
+      <div class="registration-section-heading">
+        <div>
+          <span class="registration-section-eyebrow">Bank Transfer</span>
+          <h2>Payment of Registration Fee</h2>
+        </div>
+      </div>
+
+      <div class="payment-details-grid">
+        <div class="payment-detail payment-detail-emphasis">
+          <span class="payment-detail-label">Account</span>
+          <strong>564098868843</strong>
+        </div>
+        <div class="payment-detail">
+          <span class="payment-detail-label">Bank</span>
+          <strong>Malayan Banking Berhad (MAYBANK)</strong>
+        </div>
+        <div class="payment-detail payment-detail-wide">
+          <span class="payment-detail-label">Bank Address</span>
+          <span>Level 1, Lot 1.01 &amp; 1.02, Bangunan Yayasan Selangor, Jalan Raja Muda Aziz, 50300 Kuala Lumpur Malaysia</span>
+        </div>
+        <div class="payment-detail payment-detail-wide">
+          <span class="payment-detail-label">Bank TEL</span>
+          <span>+60 3-2681 0058 / +60 3-2681 0059 / +60 3-2681 0112</span>
+        </div>
+      </div>
+
+      <div class="alert alert-warning registration-payment-note mb-0" role="alert">
+        <strong>Important:</strong> Please include your <strong>Paper ID</strong> as a remark when making the payment; otherwise, the registration information cannot be verified.
+      </div>
+    </section>
+
+    <section class="registration-shell" id="payment-upload">
       <div class="row g-0">
         <div class="col-lg-5">
           <div class="registration-copy">
-            <span class="registration-kicker">Author Service</span>
+            <span class="registration-kicker">After Payment</span>
             <h1>Registration Submission</h1>
-            <p>Upload the conference payment record for your paper here. The system will save the Paper ID, First Author's Name, and Payment Screenshot to the registration database.</p>
-            <p>请在此提交论文缴费信息。系统会将 Paper ID、First Author's Name 和 Payment Screenshot 保存到后台数据库中。</p>
+            <p>After completing the bank transfer, upload the conference payment record for your paper here. The system will save the Paper ID, First Author's Name, and Payment Screenshot to the registration database.</p>
+            <p>完成银行转账后，请在此提交论文缴费信息。系统会将 Paper ID、First Author's Name 和 Payment Screenshot 保存到后台数据库中。</p>
             <ul class="registration-points">
               <li>Paper ID and first author name are required.</li>
               <li>Payment Screenshot supports PNG, JPG, JPEG, and WEBP.</li>
@@ -68,10 +162,14 @@
         </div>
         <div class="col-lg-7">
           <div class="registration-form-pane">
-            <h2>Complete Your Upload</h2>
+            <h2>Upload Payment Record</h2>
             <p>Please fill in the form below and click confirm to submit your registration payment screenshot.</p>
 
             <form id="registrationForm" class="registration-form" novalidate>
+              <div class="d-none" aria-hidden="true">
+                <label for="website">Website</label>
+                <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+              </div>
               <div class="mb-3">
                 <label class="form-label" for="paperId">Paper ID</label>
                 <input class="form-control" id="paperId" name="paperId" type="text" maxlength="100" placeholder="e.g. 12" required>
@@ -107,6 +205,8 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
   <script src="js/registration.js"></script>
 </body>
 </html>

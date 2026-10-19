@@ -92,238 +92,202 @@ body > .navbar + .site-header {
     margin-top: 30px;
   }
 
-  /* ===== Venue and nearby hotels page ===== */
   .hotel-page {
-    min-height: 100vh;
-    background: #ffffff;
+    background: linear-gradient(180deg, #f3f6fb 0%, #ffffff 260px);
   }
 
-  .venue-main {
+  .hotel-main {
     margin-top: 2rem;
     margin-bottom: 3rem;
   }
 
-  .venue-section + .venue-section {
-    margin-top: 3.5rem;
+  .hotel-hero {
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 18px 48px rgba(8, 21, 58, 0.08);
+    overflow: hidden;
   }
 
-  .venue-heading {
-    margin-bottom: 1.75rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 2px solid #b77900;
+  .hotel-copy {
+    padding: 2rem;
   }
 
-  .venue-heading h1,
-  .venue-heading h2 {
+  .hotel-page-title {
     margin-bottom: 0.5rem;
-    color: #0b376f;
-    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: #0d6efd;
+    font-size: 0.95rem;
     font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
-  .venue-heading p {
-    margin-bottom: 0;
-    color: #536176;
-    font-size: 1.05rem;
-  }
-
-  .venue-feature-card,
-  .venue-mini-gallery figure,
-  .venue-attraction-gallery figure {
-    margin: 0;
-  }
-
-  .venue-feature-card img {
-    width: 100%;
-    aspect-ratio: 1.95 / 1;
-    object-fit: cover;
-    border: 1px solid #d8e1ee;
-  }
-
-  .venue-feature-card figcaption,
-  .venue-mini-gallery figcaption,
-  .venue-attraction-gallery figcaption {
-    padding: 0.45rem 0.5rem;
-    border: 1px solid #b8cbea;
-    border-top: 0;
-    background: #eef5ff;
-    color: #0b376f;
-    text-align: center;
+  .hotel-eyebrow {
+    display: inline-block;
+    margin-bottom: 0.85rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(13, 110, 253, 0.1);
+    color: #0b4aa8;
+    font-size: 0.85rem;
     font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
 
-  .venue-mini-gallery img {
-    width: 100%;
-    height: 137px;
-    object-fit: cover;
-    border: 1px solid #d8e1ee;
-  }
-
-  .venue-mini-gallery figcaption {
-    min-height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.86rem;
-  }
-
-  .venue-details h2 {
-    color: #0b376f;
-    font-size: 1.65rem;
+  .hotel-name {
+    font-size: 2.15rem;
     font-weight: 700;
-  }
-
-  .venue-details address {
-    margin: 1rem 0 1.5rem;
-    color: #202b3f;
-    font-size: 1.3rem;
-    font-style: normal;
-    line-height: 1.45;
-  }
-
-  .venue-details h3 {
+    color: #08153a;
     margin-bottom: 1rem;
-    color: #b77900;
-    font-size: 1.25rem;
-    font-weight: 700;
   }
 
-  .venue-access-list {
-    margin-bottom: 1.4rem;
-    padding-left: 1.25rem;
-    color: #202b3f;
-    line-height: 1.55;
-  }
-
-  .travel-reference {
-    padding: 1rem 1.1rem;
-    border: 2px solid #b8cbea;
-    background: #fff8e9;
-  }
-
-  .travel-reference h4 {
-    margin-bottom: 0.5rem;
-    color: #202b3f;
-    font-size: 1.05rem;
-  }
-
-  .travel-reference p {
-    margin-bottom: 0.25rem;
-    color: #202b3f;
-    line-height: 1.45;
-  }
-
-  .travel-reference p:last-child {
+  .hotel-summary {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #32415f;
     margin-bottom: 0;
   }
 
-  .venue-attraction-gallery img {
-    width: 100%;
-    height: 195px;
-    object-fit: cover;
-    border: 1px solid #d8e1ee;
+  .hotel-intro-note {
+    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #32415f;
   }
 
-  .venue-attraction-gallery figcaption {
+  .hotel-summary .cn-text,
+  .hotel-meta .cn-text,
+  .hotel-table .cn-text,
+  .hotel-list .cn-text {
+    display: block;
+    margin-top: 0.25rem;
+    color: #5e6b85;
+  }
+
+  .hotel-gallery-card {
+    height: 100%;
+    border: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(8, 21, 58, 0.08);
+  }
+
+  .hotel-gallery-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
+
+  .hotel-gallery-card .card-body {
+    background: #ffffff;
+    padding: 1rem 1.1rem;
+  }
+
+  .hotel-gallery-card .card-text {
+    margin: 0;
+    color: #4e5b73;
     font-size: 0.95rem;
   }
 
-  .nearby-hotel-card {
-    height: 100%;
-    padding: 1rem 1.15rem;
-    border: 1px solid #b8cbea;
-    background: #f8fbff;
-  }
-
-  .nearby-hotel-card h3 {
-    margin-bottom: 0.45rem;
-    color: #202b3f;
-    font-size: 1.05rem;
-    font-weight: 500;
-  }
-
-  .nearby-hotel-card h3 span {
-    white-space: nowrap;
-    color: #0b376f;
-    letter-spacing: 0.05em;
-  }
-
-  .nearby-hotel-card p {
-    margin-bottom: 0.2rem;
-    color: #202b3f;
-    line-height: 1.45;
-  }
-
-  .nearby-hotel-card a {
-    color: #0b5ed7;
-    text-decoration: none;
-  }
-
-  .nearby-hotel-card a:hover {
-    text-decoration: underline;
-  }
-
-  .hotel-rating-note {
+  .hotel-section {
     margin-top: 2rem;
-    margin-bottom: 0;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #b8cbea;
-    color: #536176;
-    font-size: 0.86rem;
   }
 
-  @media (max-width: 991.98px) {
-    .venue-mini-gallery img {
-      height: 160px;
-    }
+  .hotel-section-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #dc3545;
+    margin-bottom: 1rem;
+  }
 
-    .venue-attraction-gallery img {
-      height: 180px;
-    }
+  .hotel-meta,
+  .hotel-list,
+  .hotel-table-wrap {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 14px 36px rgba(8, 21, 58, 0.07);
+    padding: 1.5rem;
+  }
+
+  .hotel-meta p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: #24314f;
+  }
+
+  .hotel-meta p:last-child {
+    margin-bottom: 0;
+  }
+
+  .hotel-list {
+    padding-left: 2.75rem;
+  }
+
+  .hotel-list li {
+    margin-bottom: 0.85rem;
+    line-height: 1.7;
+    color: #24314f;
+  }
+
+  .hotel-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .hotel-link {
+    color: #0d6efd;
+    word-break: break-word;
+  }
+
+  .hotel-table-wrap {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .hotel-table {
+    margin-bottom: 0;
+  }
+
+  .hotel-table thead th {
+    background: #08153a;
+    color: #ffffff;
+    font-weight: 600;
+    border-bottom: 0;
+    vertical-align: middle;
+  }
+
+  .hotel-table td {
+    vertical-align: middle;
+    color: #24314f;
+  }
+
+  .hotel-table tbody tr:nth-child(even) {
+    background: #f8faff;
+  }
+
+  .hotel-table strong {
+    color: #08153a;
   }
 
   @media (max-width: 767.98px) {
-    .venue-main {
-      margin-top: 1.5rem;
+    .hotel-copy {
+      padding: 1.5rem;
     }
 
-    .venue-section + .venue-section {
-      margin-top: 2.5rem;
+    .hotel-name {
+      font-size: 1.75rem;
     }
 
-    .venue-heading h1,
-    .venue-heading h2 {
-      font-size: 1.85rem;
+    .hotel-gallery-card img {
+      height: 220px;
     }
 
-    .venue-feature-card img {
-      aspect-ratio: 1.55 / 1;
+    .hotel-meta,
+    .hotel-list {
+      padding: 1.25rem;
     }
 
-    .venue-mini-gallery img {
-      height: 105px;
-    }
-
-    .venue-mini-gallery figcaption {
-      min-height: 56px;
-      padding: 0.35rem 0.25rem;
-      font-size: 0.75rem;
-    }
-
-    .venue-details address {
-      font-size: 1.1rem;
-    }
-
-    .venue-attraction-gallery img {
-      height: 145px;
-    }
-
-    .venue-attraction-gallery figcaption {
-      min-height: 54px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
+    .hotel-list {
+      padding-left: 2.2rem;
     }
   }
 
@@ -465,3 +429,179 @@ body > .navbar + .site-header {
     }
   }
   
+
+
+  /* ===== Registration fees & payment information ===== */
+  .registration-hero-card,
+  .registration-info-card {
+    background: #ffffff;
+    border: 1px solid #e3e8f2;
+    border-radius: 20px;
+    box-shadow: 0 12px 34px rgba(8, 21, 58, 0.06);
+  }
+
+  .registration-hero-card {
+    margin-bottom: 1.5rem;
+    padding: 1.75rem 2rem;
+  }
+
+  .registration-hero-card h1 {
+    color: #08153a;
+    font-size: clamp(1.65rem, 3vw, 2.2rem);
+  }
+
+  .registration-hero-card p {
+    color: #5b6780;
+    line-height: 1.7;
+  }
+
+  .registration-kicker-light {
+    color: #0d2a68;
+    background: #eaf1ff;
+  }
+
+  .registration-jump-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .registration-info-card {
+    margin-bottom: 1.5rem;
+    padding: 1.75rem 2rem;
+  }
+
+  .registration-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .registration-section-heading h2 {
+    margin: 0;
+    color: #08153a;
+    font-size: 1.65rem;
+  }
+
+  .registration-section-eyebrow {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: #c82333;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .registration-exchange-rate {
+    padding: 0.45rem 0.75rem;
+    border-radius: 999px;
+    background: #f1f5fb;
+    color: #4d5a73;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .registration-fee-table {
+    border: 1px solid #dfe5ef;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .registration-fee-table thead th {
+    background: #0d2a68;
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.16);
+    padding: 0.9rem 1rem;
+    vertical-align: middle;
+  }
+
+  .registration-fee-table thead th span {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  .registration-fee-table tbody td {
+    padding: 0.85rem 1rem;
+    border-color: #e6eaf1;
+  }
+
+  .registration-fee-table tbody tr:nth-child(even) td {
+    background: #f8faff;
+  }
+
+  .payment-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .payment-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-height: 92px;
+    padding: 1rem 1.1rem;
+    border: 1px solid #dde4ef;
+    border-radius: 14px;
+    background: #f8faff;
+    color: #27344e;
+    line-height: 1.55;
+  }
+
+  .payment-detail-wide {
+    grid-column: 1 / -1;
+    min-height: 0;
+  }
+
+  .payment-detail-emphasis {
+    background: #eef5ff;
+    border-color: #c8dbfb;
+  }
+
+  .payment-detail-emphasis strong {
+    color: #0d2a68;
+    font-size: 1.25rem;
+    letter-spacing: 0.035em;
+  }
+
+  .payment-detail-label {
+    color: #6b7891;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .registration-payment-note {
+    border-radius: 14px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 767.98px) {
+    .registration-hero-card,
+    .registration-info-card {
+      padding: 1.35rem;
+    }
+
+    .registration-section-heading {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .registration-exchange-rate {
+      white-space: normal;
+    }
+
+    .payment-details-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .payment-detail-wide {
+      grid-column: auto;
+    }
+  }

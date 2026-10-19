@@ -1,0 +1,14 @@
+Registration backend migrated from local Node.js/SQLite to Supabase.
+
+Removed from deployable site:
+- server.js
+- package.json
+- data/registrations.db
+
+Added:
+- js/supabase-config.js
+- Supabase browser integration in js/registration.js
+- supabase/setup.sql
+- supabase/SETUP_GUIDE.md
+
+The website will keep the Confirm button disabled until valid Supabase project values are entered in js/supabase-config.js.
