@@ -3,16 +3,81 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>IEEE USYS 2026 - Hotel</title>
+  <meta name="description" content="IEEE USYS 2026 conference venue at SAINS@USM, Penang, Malaysia, and six nearby hotels with addresses, phone numbers and distances to the venue." />
+  <title>IEEE USYS 2026 - Venue &amp; Nearby Hotels</title>
 
+  <!-- Existing website dependencies and routes are retained. -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Page-scoped additions: existing css/style.css and other website pages are unaffected. */
+    .hotel-page { color: #23334b; background: #f6f8fb; }
+    .hotel-page .hotel-main { padding-top: 38px; padding-bottom: 68px; }
+    .hotel-page .hotel-hero {
+      display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+      overflow: hidden; border-radius: 18px; background: #123355;
+      color: white; box-shadow: 0 14px 35px rgba(29,58,90,.10);
+    }
+    .hotel-page .hotel-hero-copy { padding: clamp(28px, 4.5vw, 60px); align-self: center; }
+    .hotel-page .hotel-kicker { color: #86d8e7; font-size: .8rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 750; }
+    .hotel-page .hotel-hero-title { font-size: clamp(2.1rem, 4vw, 3.35rem); line-height: 1.12; font-weight: 760; margin: 14px 0 18px; }
+    .hotel-page .hotel-hero-lead { font-size: 1.07rem; color: #e3edf7; max-width: 580px; }
+    .hotel-page .hotel-hero-address { color: #dbe9f4; margin-bottom: 24px; line-height: 1.65; }
+    .hotel-page .hotel-hero-actions { display: flex; gap: 11px; flex-wrap: wrap; }
+    .hotel-page .hotel-hero-actions a { display: inline-flex; align-items: center; padding: 10px 17px; border-radius: 8px; font-weight: 650; text-decoration: none; }
+    .hotel-page .hotel-hero-actions .action-primary { background: #f5ffff; color: #123355; }
+    .hotel-page .hotel-hero-actions .action-secondary { border: 1px solid #a5c6dc; color: white; }
+    .hotel-page .hotel-hero-actions a:focus-visible, .hotel-page .hotel-card a:focus-visible { outline: 3px solid #60cede; outline-offset: 3px; }
+    .hotel-page .hotel-hero-visual { position: relative; min-height: 340px; background: #dfe7ea; }
+    .hotel-page .hotel-hero-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hotel-page .hotel-photo-credit { position: absolute; right: 12px; bottom: 12px; padding: 6px 12px; border-radius: 5px; background: rgba(13,30,45,.78); color: #fff; font-size: .78rem; }
+    .hotel-page .hotel-section { margin-top: 52px; }
+    .hotel-page .hotel-section-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 8px 20px; margin-bottom: 18px; }
+    .hotel-page .hotel-section-title { font-size: clamp(1.3rem, 2vw, 1.75rem); color: #123355; font-weight: 770; margin: 0; }
+    .hotel-page .hotel-section-note { color: #596b7e; font-size: .94rem; margin: 0; }
+    .hotel-page .hotel-info-box { background: #fff; border: 1px solid #e2e9ef; border-radius: 13px; padding: 22px 24px; height: 100%; }
+    .hotel-page .hotel-info-label { color: #587084; text-transform: uppercase; letter-spacing: .08em; font-size: .74rem; font-weight: 760; margin-bottom: 8px; }
+    .hotel-page .hotel-info-box strong { display: block; color: #183856; font-weight: 760; font-size: 1.16rem; }
+    .hotel-page .hotel-info-box p { margin-bottom: 0; color: #597084; }
+    .hotel-page .hotel-distance { color: #145079; }
+    .hotel-page .hotel-venue-details { border-left: 4px solid #2287ae; background: white; border-radius: 0 13px 13px 0; padding: 25px 28px; line-height: 1.7; border-top: 1px solid #e2e9ef; border-right: 1px solid #e2e9ef; border-bottom: 1px solid #e2e9ef; }
+    .hotel-page .hotel-venue-details p:last-child { margin-bottom: 0; }
+    .hotel-page .hotel-scenic-card { background: #fff; border: 1px solid #e2e9ef; border-radius: 13px; overflow: hidden; height: 100%; }
+    .hotel-page .hotel-scenic-card img { display: block; width: 100%; height: 180px; object-fit: cover; }
+    .hotel-page .hotel-scenic-card figcaption { padding: 13px 17px; font-size: .95rem; font-weight: 650; color: #244564; }
+    .hotel-page .hotel-card { background: #fff; height: 100%; padding: 24px; border: 1px solid #e2e9ef; border-radius: 14px; box-shadow: 0 6px 19px rgba(23,57,83,.035); }
+    .hotel-page .hotel-card-top { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 8px 12px; }
+    .hotel-page .hotel-card-title { font-size: 1.15rem; font-weight: 760; line-height: 1.32; margin: 0; color: #123355; }
+    .hotel-page .hotel-stars { color: #b37a15; letter-spacing: .06em; font-size: .97rem; margin-top: 5px; }
+    .hotel-page .hotel-distance-chip { color: #17618a; background: #eaf4f9; font-size: .85rem; font-weight: 760; padding: 7px 10px; border-radius: 8px; white-space: nowrap; }
+    .hotel-page .hotel-card-address { line-height: 1.55; margin: 20px 0 11px; min-height: 3em; color: #41566a; }
+    .hotel-page .hotel-card-phone { margin: 0; line-height: 1.65; }
+    .hotel-page .hotel-card-phone a { color: #086b9c; font-weight: 650; text-decoration: none; }
+    .hotel-page .hotel-card-phone a:hover { text-decoration: underline; }
+    .hotel-page .hotel-rating-note { margin-top: 15px; font-size: .85rem; color: #667788; }
+    .hotel-page .cn-text { display: block; color: inherit; }
+    .hotel-page .hotel-muted { color: #687b8b; }
+    @media (max-width: 991.98px) {
+      .hotel-page .hotel-hero { grid-template-columns: 1fr; }
+      .hotel-page .hotel-hero-visual { min-height: 280px; max-height: 430px; }
+      .hotel-page .hotel-hero-visual img { max-height: 430px; }
+    }
+    @media (max-width: 575.98px) {
+      .hotel-page .hotel-main { padding-top: 24px; padding-bottom: 42px; }
+      .hotel-page .hotel-hero-copy { padding: 27px 23px; }
+      .hotel-page .hotel-section { margin-top: 36px; }
+      .hotel-page .hotel-card { padding: 20px; }
+      .hotel-page .hotel-scenic-card img { height: 200px; }
+      .hotel-page .hotel-card-address { min-height: 0; }
+    }
+  </style>
 </head>
 <body class="hotel-page">
+  <!-- Original navigation links and login/register entries preserved exactly. -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="index.html">IEEE USYS 2026</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
@@ -25,7 +90,6 @@
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="hotel.html">Hotel</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
-
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#">Welcome, Visitor</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
@@ -40,189 +104,180 @@
       <div class="flex-grow-1">
         <h1>IEEE</h1>
         <h4>IEEE 11TH INTERNATIONAL CONFERENCE ON UNDERWATER SYSTEM TECHNOLOGY: THEORY AND APPLICATIONS</h4>
-        <p>16th to 18th October 2026, Shanghai, China</p>
-        <div class="theme-badge">Conference Hotel Information</div>
+        <!-- The conference date is confirmed against the updated official USYS 2026 website (https://www.usys26.com/). -->
+        <p>18th to 20th December 2026, Penang, Malaysia</p>
+        <div class="theme-badge">Conference Venue &amp; Nearby Hotels</div>
       </div>
       <div class="header-images d-none d-md-block">
-        <img src="img/1.jpg" alt="USYS 2026 banner" class="rounded img-fluid me-2">
-        <img src="img/2.jpg" alt="Shanghai skyline" class="rounded img-fluid">
+        <!-- Preserve original site image paths, with fallbacks if viewed outside the existing site. -->
+        <img src="img/1.jpg" onerror="this.onerror=null;this.src='img/venue/penang-city-hall.png'" alt="USYS 2026 banner" class="rounded img-fluid me-2">
+        <img src="img/2.jpg" onerror="this.onerror=null;this.src='img/venue/kapitan-keling-mosque.png'" alt="Penang landmark" class="rounded img-fluid">
       </div>
     </div>
   </header>
 
   <main class="container hotel-main">
-    <section class="hotel-hero">
-      <div class="hotel-copy">
-        <p class="hotel-page-title">Hotel Information</p>
-        <span class="hotel-eyebrow">Official Hotel</span>
-        <h1 class="hotel-name">HOWARD JOHNSON LEONORA PLAZA SHANGHAI<br>上海丽昂豪生大酒店</h1>
-        <p class="hotel-intro-note">
-          Official conference accommodation for IEEE USYS 2026.
-          <span class="cn-text">IEEE USYS 2026 官方推荐酒店。</span>
-        </p>
+    <section class="hotel-hero" aria-labelledby="venue-title">
+      <div class="hotel-hero-copy">
+        <div class="hotel-kicker">USYS 2026 · Conference Venue / 会议地点</div>
+        <h1 class="hotel-hero-title" id="venue-title">SAINS@USM<br>Bukit Jambul</h1>
+        <p class="hotel-hero-lead">IEEE USYS 2026 Conference Venue<br><span class="cn-text">IEEE USYS 2026 会议举办地点</span></p>
+        <p class="hotel-hero-address">SAINS@USM Campus<br>Persiaran Bukit Jambul<br>11900 Bayan Lepas, Pulau Pinang, Malaysia</p>
+        <div class="hotel-hero-actions">
+          <a class="action-primary" href="#nearby-hotels">View Nearby Hotels / 查看酒店</a>
+          <a class="action-secondary" href="#travel-info">Travel Information / 交通信息</a>
+        </div>
+      </div>
+      <div class="hotel-hero-visual">
+        <img src="img/venue/sains-usm-entrance.png" alt="Entrance of SAINS@USM campus, Bukit Jambul" fetchpriority="high">
+        <div class="hotel-photo-credit">Entrance of SAINS@USM / 会场入口</div>
       </div>
     </section>
 
-    <section class="hotel-section">
-      <div class="row g-4">
+    <section class="hotel-section" aria-labelledby="venue-address-title">
+      <div class="hotel-section-heading">
+        <h2 class="hotel-section-title" id="venue-address-title">Conference Venue &amp; Address / 会场及地址</h2>
+      </div>
+      <div class="hotel-venue-details">
+        <p class="mb-1"><strong>SAINS@USM Campus, Bukit Jambul</strong></p>
+        <p class="mb-1">Persiaran Bukit Jambul, 11900 Bayan Lepas, Pulau Pinang, Malaysia</p>
+        <p class="hotel-muted">会议地点：马来西亚槟城，Bukit Jambul，SAINS@USM 园区。</p>
+      </div>
+    </section>
+
+    <section class="hotel-section" id="travel-info" aria-labelledby="travel-title">
+      <div class="hotel-section-heading">
+        <h2 class="hotel-section-title" id="travel-title">Transportation Information / 交通信息</h2>
+        <p class="hotel-section-note">Reference distances to SAINS@USM / 至会场的参考距离</p>
+      </div>
+      <div class="row g-3">
         <div class="col-md-4">
-          <div class="card hotel-gallery-card">
-            <img src="img/hotel/hotel-1.jpg" alt="Hotel exterior view">
-            <div class="card-body">
-              <p class="card-text">Exterior View / 酒店外观</p>
-            </div>
+          <div class="hotel-info-box">
+            <div class="hotel-info-label">Nearest Airport / 最近机场</div>
+            <strong>Penang International Airport (PEN)</strong>
+            <p>槟城国际机场</p>
+            <p class="mt-2 hotel-distance"><strong>5.8 km</strong></p>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card hotel-gallery-card">
-            <img src="img/hotel/hotel-2.jpg" alt="Hotel lobby or suite view">
-            <div class="card-body">
-              <p class="card-text">Interior Space / 酒店环境</p>
-            </div>
+          <div class="hotel-info-box">
+            <div class="hotel-info-label">Express Bus / 长途汽车站</div>
+            <strong>Sungai Nibong Express Bus Terminal</strong>
+            <p>Sungai Nibong 长途汽车站</p>
+            <p class="mt-2 hotel-distance"><strong>3.5 km</strong></p>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card hotel-gallery-card">
-            <img src="img/hotel/hotel-3.jpg" alt="Hotel guest room view">
-            <div class="card-body">
-              <p class="card-text">Guest Room / 客房展示</p>
-            </div>
+          <div class="hotel-info-box">
+            <div class="hotel-info-label">Nearest Train Station / 火车站</div>
+            <strong>KTM Station Butterworth</strong>
+            <p>Butterworth 火车站</p>
+            <p class="mt-2 hotel-distance"><strong>24.1 km</strong></p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="hotel-section">
-      <h2 class="hotel-section-title">Hotel Introduction / 酒店简介</h2>
-      <div class="hotel-meta">
-        <p class="hotel-summary">
-          Howard Johnson Leonora Plaza Shanghai is located in the center of Jinqiao Export Processing Zone, Pudong New Area, Shanghai. The hotel enjoys a convenient transportation network and is surrounded by various restaurants and commercial facilities. It provides modern and elegant accommodation, high-quality conference services, and comprehensive business facilities for conference participants.
-          <span class="cn-text">上海丽昂豪生大酒店位于上海市浦东新区金桥出口加工区核心区域，交通便利，周边商业及餐饮配套完善。酒店拥有现代典雅的客房环境、完善的会议接待设施及高品质商务服务，可为参会代表提供舒适便捷的住宿体验。</span>
-        </p>
+    <section class="hotel-section" aria-labelledby="gallery-title">
+      <div class="hotel-section-heading">
+        <h2 class="hotel-section-title" id="gallery-title">Discover Penang / 槟城风光</h2>
+        <p class="hotel-section-note">Venue presentation photographs / PPT 所附景点图片</p>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <figure class="hotel-scenic-card mb-0">
+            <img src="img/venue/penang-city-hall.png" alt="Penang City Hall" loading="lazy">
+            <figcaption>City Hall / 市政厅</figcaption>
+          </figure>
+        </div>
+        <div class="col-md-4">
+          <figure class="hotel-scenic-card mb-0">
+            <img src="img/venue/kapitan-keling-mosque.png" alt="Kapitan Keling Mosque" loading="lazy">
+            <figcaption>Kapitan Keling Mosque / 甲必丹吉宁清真寺</figcaption>
+          </figure>
+        </div>
+        <div class="col-md-4">
+          <figure class="hotel-scenic-card mb-0">
+            <img src="img/venue/george-town-street-art.png" alt="George Town street art" loading="lazy">
+            <figcaption>George Town Street Art / 乔治市街头艺术</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
-    <section class="hotel-section">
-      <h2 class="hotel-section-title">Address / 地址</h2>
-      <div class="hotel-meta">
-        <p>
-          <strong>No.99 Jinxin Road, Pudong New Area, Shanghai, China</strong>
-          <span class="cn-text">中国上海市浦东新区金新路99号</span>
-        </p>
+    <section class="hotel-section" id="nearby-hotels" aria-labelledby="hotels-title">
+      <div class="hotel-section-heading">
+        <h2 class="hotel-section-title" id="hotels-title">Nearby Hotels / 周边酒店</h2>
+        <p class="hotel-section-note">Six hotels listed in the venue presentation / PPT 中列出的 6 家酒店</p>
       </div>
-    </section>
-
-    <section class="hotel-section">
-      <h2 class="hotel-section-title">Transportation Information / 交通信息</h2>
-      <ol class="hotel-list">
-        <li>
-          About 23 km from Shanghai Pudong International Airport.
-          <span class="cn-text">距上海浦东国际机场约 23 公里。</span>
-        </li>
-        <li>
-          About 24.7 km from Shanghai Hongqiao International Airport.
-          <span class="cn-text">距上海虹桥国际机场约 24.7 公里。</span>
-        </li>
-        <li>
-          About 26.6 km from Shanghai Hongqiao Railway Station.
-          <span class="cn-text">距上海虹桥火车站约 26.6 公里。</span>
-        </li>
-        <li>
-          About 13.1 km from Shanghai Railway Station.
-          <span class="cn-text">距上海火车站约 13.1 公里。</span>
-        </li>
-        <li>
-          About 0.8 km from Metro Line 9 Taierzhuang Road Station.
-          <span class="cn-text">距地铁 9 号线台儿庄路站约 0.8 公里。</span>
-        </li>
-      </ol>
-    </section>
-
-    <section class="hotel-section">
-      <h2 class="hotel-section-title">Hotel Reservation Information / 酒店预订信息</h2>
-      <div class="hotel-meta">
-        <p>
-          <strong>HOWARD JOHNSON LEONORA PLAZA SHANGHAI</strong><br>
-          上海丽昂豪生大酒店
-        </p>
-        <p>
-          <strong>Tel / 电话:</strong>
-          <a class="hotel-link" href="tel:+862086009099">+8620-86009099</a>
-        </p>
-        <p>
-          <strong>Reservation Website / 酒店官网:</strong>
-          <a class="hotel-link" href="https://howardjohnsonleonoraplaza.hotelshanghai.cn" target="_blank" rel="noopener noreferrer">https://howardjohnsonleonoraplaza.hotelshanghai.cn</a>
-        </p>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <article class="hotel-card">
+            <div class="hotel-card-top">
+              <div><h3 class="hotel-card-title">1. Amari SPICE Penang</h3><div class="hotel-stars" aria-label="Five stars">★★★★★</div></div>
+              <span class="hotel-distance-chip">2.4 km to venue</span>
+            </div>
+            <p class="hotel-card-address">2 Persiaran Mahsuri, 11900 Bayan Lepas, Pulau Pinang, Malaysia</p>
+            <p class="hotel-card-phone"><strong>Tel / 电话:</strong> <a href="tel:+6046831188">+604 683 1188</a></p>
+          </article>
+        </div>
+        <div class="col-md-6">
+          <article class="hotel-card">
+            <div class="hotel-card-top">
+              <div><h3 class="hotel-card-title">2. AC Hotel Penang</h3><div class="hotel-stars" aria-label="Four stars">★★★★</div></div>
+              <span class="hotel-distance-chip">2.5 km to venue</span>
+            </div>
+            <p class="hotel-card-address">213, Jalan Bukit Gambir, Bukit Jambul, 11950 Bayan Lepas, Pulau Pinang, Malaysia</p>
+            <p class="hotel-card-phone"><strong>Tel / 电话:</strong> <a href="tel:+6046468000">+604 646 8000</a></p>
+          </article>
+        </div>
+        <div class="col-md-6">
+          <article class="hotel-card">
+            <div class="hotel-card-top">
+              <div><h3 class="hotel-card-title">3. Olive Tree Hotel</h3><div class="hotel-stars" aria-label="Four stars">★★★★</div></div>
+              <span class="hotel-distance-chip">2.0 km to venue</span>
+            </div>
+            <p class="hotel-card-address">76, Jalan Mahsuri, 11950 Bayan Lepas, Pulau Pinang, Malaysia</p>
+            <p class="hotel-card-phone"><strong>Tel / 电话:</strong> <a href="tel:+6046377777">+604 637 7777</a></p>
+          </article>
+        </div>
+        <div class="col-md-6">
+          <article class="hotel-card">
+            <div class="hotel-card-top">
+              <div><h3 class="hotel-card-title">4. U Hotel</h3><div class="hotel-stars" aria-label="Three stars">★★★</div></div>
+              <span class="hotel-distance-chip">3.7 km to venue</span>
+            </div>
+            <p class="hotel-card-address">676 Jalan Sungai Dua, 11700 Pulau Pinang, Malaysia</p>
+            <p class="hotel-card-phone"><strong>Tel / 电话:</strong> <a href="tel:+6046581000">+604 658 1000</a> / <a href="tel:+6046581001">+604 658 1001</a></p>
+          </article>
+        </div>
+        <div class="col-md-6">
+          <article class="hotel-card">
+            <div class="hotel-card-top">
+              <div><h3 class="hotel-card-title">5. Hotel Seri Malaysia Bayan Baru</h3><div class="hotel-stars" aria-label="Two stars">★★</div></div>
+              <span class="hotel-distance-chip">2.5 km to venue</span>
+            </div>
+            <p class="hotel-card-address">No. 7, Jalan Mayang Pasir 2, Bandar Bayan Baru, 11950 Bayan Lepas, Pulau Pinang, Malaysia</p>
+            <p class="hotel-card-phone"><strong>Tel / 电话:</strong> <a href="tel:+6046429452">+604 642 9452</a></p>
+          </article>
+        </div>
+        <div class="col-md-6">
+          <article class="hotel-card">
+            <div class="hotel-card-top">
+              <div><h3 class="hotel-card-title">6. OYO 993 88 Mario's</h3><div class="hotel-stars" aria-label="Two stars">★★</div></div>
+              <span class="hotel-distance-chip">1.2 km to venue</span>
+            </div>
+            <p class="hotel-card-address">88 Lintang Bukit Jambul, Bukit Jambul, 11900 Bayan Lepas, Pulau Pinang, Malaysia</p>
+            <p class="hotel-card-phone"><strong>Tel / 电话:</strong> <a href="tel:+60104011393">+60 10 401 1393</a></p>
+          </article>
+        </div>
       </div>
-    </section>
-
-    <section class="hotel-section">
-      <h2 class="hotel-section-title">Conference Room Rates / 会议协议价</h2>
-      <div class="table-responsive hotel-table-wrap">
-        <table class="table hotel-table">
-          <thead>
-            <tr>
-              <th scope="col">Room Type / 房型</th>
-              <th scope="col">Conference Rate (RMB/Night) / 协议价（元/晚）</th>
-              <th scope="col">Benefits / 礼遇</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Standard Queen Room</strong><span class="cn-text">标准大床房</span></td>
-              <td>400</td>
-              <td>Inclusive of One Breakfast<span class="cn-text">含单早</span></td>
-            </tr>
-            <tr>
-              <td><strong>Superior Queen Room</strong><span class="cn-text">高级大床房</span></td>
-              <td>500</td>
-              <td>Inclusive of One Breakfast<span class="cn-text">含单早</span></td>
-            </tr>
-            <tr>
-              <td><strong>Superior 2-bed Room</strong><span class="cn-text">高级双床房</span></td>
-              <td>570</td>
-              <td>Inclusive of Two Breakfasts<span class="cn-text">含双早</span></td>
-            </tr>
-            <tr>
-              <td><strong>Deluxe Queen Room</strong><span class="cn-text">豪华大床房</span></td>
-              <td>600</td>
-              <td>Inclusive of One Breakfast<span class="cn-text">含单早</span></td>
-            </tr>
-            <tr>
-              <td><strong>Deluxe Scenic Queen Room</strong><span class="cn-text">豪华景观大床房</span></td>
-              <td>650</td>
-              <td>Inclusive of One Breakfast<span class="cn-text">含单早</span></td>
-            </tr>
-            <tr>
-              <td><strong>Deluxe Scenic Twin Room</strong><span class="cn-text">豪华景观双床房</span></td>
-              <td>720</td>
-              <td>Inclusive of Two Breakfasts<span class="cn-text">含双早</span></td>
-            </tr>
-            <tr>
-              <td><strong>Executive Queen Room</strong><span class="cn-text">行政大床房</span></td>
-              <td>700</td>
-              <td>Inclusive of One Breakfast<span class="cn-text">含单早</span></td>
-            </tr>
-            <tr>
-              <td><strong>Executive Suite</strong><span class="cn-text">行政套房</span></td>
-              <td>800</td>
-              <td>Inclusive of One / Two Breakfasts<span class="cn-text">含单早 / 双早</span></td>
-            </tr>
-            <tr>
-              <td><strong>Executive Deluxe Suite</strong><span class="cn-text">行政豪华套房</span></td>
-              <td>1000</td>
-              <td>Inclusive of One / Two Breakfasts<span class="cn-text">含单早 / 双早</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <p class="hotel-rating-note">★ Hotel classifications follow the Ministry of Tourism, Arts and Culture Malaysia ratings quoted in the supplied presentation (updated 8 July 2025). Distances are those provided in the presentation.<br>★ 酒店星级依据 PPT 引用的马来西亚旅游、艺术及文化部评级（更新于 2025 年 7 月 8 日）；距离采用 PPT 所列数据。</p>
     </section>
   </main>
 
   <footer class="bg-dark text-white py-3">
-    <div class="container text-center small">
-      2026 IEEE USYS Conference Website
-    </div>
+    <div class="container text-center small">2026 IEEE USYS Conference Website</div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
