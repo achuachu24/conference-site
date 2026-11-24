@@ -9,50 +9,48 @@
   <link rel="stylesheet" href="css/style.css" />
 
   <style>
-    .registration-notice-card {
-      background: #f7f9fc;
-      border: 1px solid #d9e2ef;
+    .registration-notes-card {
+      border: 1px solid #d8e2ef;
       border-left: 5px solid #0d6efd;
       border-radius: 10px;
+      background: #f8fbff;
       padding: 1.5rem;
       margin-bottom: 1.5rem;
     }
 
-    .registration-notice-card h2 {
-      color: #0b3d75;
-      font-size: 1.45rem;
-      font-weight: 700;
+    .registration-notes-card h2 {
+      font-size: 1.55rem;
       margin-bottom: 1rem;
     }
 
-    .registration-notice-card h3 {
-      color: #1f2d3d;
+    .registration-note-item + .registration-note-item {
+      margin-top: 1.35rem;
+    }
+
+    .registration-note-item h3 {
       font-size: 1.05rem;
       font-weight: 700;
-      margin-top: 1.25rem;
-      margin-bottom: 0.45rem;
+      margin-bottom: 0.5rem;
+      color: #173d6b;
     }
 
-    .registration-notice-card p {
-      margin-bottom: 0.6rem;
-      line-height: 1.7;
+    .registration-note-item p {
+      margin-bottom: 0.55rem;
     }
 
-    .registration-notice-card ul {
-      margin-bottom: 0.75rem;
+    .registration-note-item ul {
+      margin-bottom: 0.55rem;
       padding-left: 1.25rem;
     }
 
-    .registration-notice-card li {
+    .registration-note-item li {
       margin-bottom: 0.35rem;
-      line-height: 1.6;
     }
   </style>
 </head>
 
 <body class="registration-page">
 
-  <!-- ===== Navigation ===== -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="index.html">IEEE USYS 2026</a>
@@ -81,7 +79,6 @@
     </div>
   </nav>
 
-  <!-- ===== Header ===== -->
   <header class="site-header py-4">
     <div class="container d-flex align-items-center">
       <div class="flex-grow-1">
@@ -100,13 +97,12 @@
 
   <main class="container registration-main">
 
-    <!-- ===== Registration Introduction ===== -->
     <section class="registration-hero-card" id="registration-info">
       <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
         <div>
           <span class="registration-kicker registration-kicker-light">USYS 2026 Registration</span>
           <h1 class="mb-2">Registration Fees &amp; Payment Information</h1>
-          <p class="mb-0">Please review the registration rules, registration fees and bank payment information before uploading your payment record.</p>
+          <p class="mb-0">Please review the registration information, fee schedule, and bank payment information before uploading your payment record.</p>
         </div>
 
         <div class="registration-jump-links" aria-label="Registration quick links">
@@ -118,40 +114,49 @@
       </div>
     </section>
 
-    <!-- ===== Important Registration Notes ===== -->
-    <section class="registration-notice-card" id="registration-notes">
+    <section class="registration-notes-card" id="registration-notes">
+      <span class="registration-section-eyebrow">Important Information</span>
       <h2>Important Registration Notes</h2>
 
-      <p>Thank you for raising these questions. Please note the following registration requirements.</p>
+      <div class="registration-note-item">
+        <h3>1. Authors with Multiple Papers</h3>
+        <p>
+          Each full author registration covers one accepted paper. An author may register a maximum of
+          one additional paper by paying the additional-paper fee. Therefore, a single registration can
+          cover a maximum of two papers.
+        </p>
+        <p class="mb-0">
+          Any further accepted papers will require a separate full registration.
+        </p>
+      </div>
 
-      <h3>1. Authors with Multiple Papers</h3>
-      <p>
-        Each full author registration covers one accepted paper. An author may register a maximum of one additional paper by paying the additional-paper fee. Therefore, a single registration can cover a maximum of two papers. Any further accepted papers will require a separate full registration.
-      </p>
+      <div class="registration-note-item">
+        <h3>2. Verification of IEEE Membership and Student Status</h3>
+        <p>
+          Since registration is currently handled through bank transfer, authors should provide the
+          following supporting documents, as applicable:
+        </p>
 
-      <h3>2. Verification of IEEE Membership and Student Status</h3>
-      <p>
-        Since registration is currently handled through bank transfer, authors should provide supporting documents when applicable:
-      </p>
+        <ul>
+          <li><strong>IEEE Members:</strong> Valid IEEE membership number and membership card.</li>
+          <li><strong>Students:</strong> Valid student ID or proof of enrolment.</li>
+          <li><strong>IEEE Student Members:</strong> Both IEEE membership and student status verification.</li>
+        </ul>
 
-      <ul>
-        <li><strong>IEEE members:</strong> Valid IEEE membership number and membership card.</li>
-        <li><strong>Students:</strong> Valid student ID or proof of enrolment.</li>
-        <li><strong>IEEE student members:</strong> Both IEEE membership and student status verification.</li>
-      </ul>
-
-      <p class="mb-0">
-        The registration team will verify these documents before confirming the applicable registration category and payment.
-      </p>
+        <p class="mb-0">
+          The registration team will verify these documents before confirming the applicable registration
+          category and payment.
+        </p>
+      </div>
     </section>
 
-    <!-- ===== Registration Fees ===== -->
     <section class="registration-info-card" id="fees">
       <div class="registration-section-heading">
         <div>
           <span class="registration-section-eyebrow">Conference Registration</span>
           <h2>Conference Fees</h2>
         </div>
+
         <div class="registration-exchange-rate">Exchange rate: 1 USD ≈ 4 MYR</div>
       </div>
 
@@ -164,6 +169,7 @@
               <th scope="col">Normal Price<br><span>(After 27th Nov.)</span></th>
             </tr>
           </thead>
+
           <tbody>
             <tr>
               <td><strong>IEEE Regular Member</strong></td>
@@ -194,7 +200,6 @@
       </div>
     </section>
 
-    <!-- ===== Bank Transfer Information ===== -->
     <section class="registration-info-card" id="payment-info">
       <div class="registration-section-heading">
         <div>
@@ -204,6 +209,26 @@
       </div>
 
       <div class="payment-details-grid">
+        <div class="payment-detail payment-detail-wide">
+          <span class="payment-detail-label">Receiving Institution</span>
+          <strong>Persatuan Kejuruteraan Lautan (Oceanic Engineering Society)</strong>
+        </div>
+
+        <div class="payment-detail">
+          <span class="payment-detail-label">Registration No.</span>
+          <strong>PPM-001-10-25111987-000029</strong>
+        </div>
+
+        <div class="payment-detail payment-detail-wide">
+          <span class="payment-detail-label">Registered Address</span>
+          <span>UNIVERSITI TEKNOLOGI MALAYSIA, JALAN SULTAN YAHYA PETRA, 54100, WILAYAH PERSEKUTUAN KUALA LUMPUR</span>
+        </div>
+
+        <div class="payment-detail payment-detail-wide">
+          <span class="payment-detail-label">Account Holder</span>
+          <strong>PERSATUAN KEJURUTERAAN LAUTAN (OCEANIC ENGINEERING SOCIETY)</strong>
+        </div>
+
         <div class="payment-detail payment-detail-emphasis">
           <span class="payment-detail-label">Account</span>
           <strong>564098868843</strong>
@@ -212,6 +237,11 @@
         <div class="payment-detail">
           <span class="payment-detail-label">Bank</span>
           <strong>Malayan Banking Berhad (MAYBANK)</strong>
+        </div>
+
+        <div class="payment-detail">
+          <span class="payment-detail-label">SWIFT</span>
+          <strong>MBBEMYKL</strong>
         </div>
 
         <div class="payment-detail payment-detail-wide">
@@ -230,23 +260,14 @@
       </div>
     </section>
 
-    <!-- ===== Payment Upload ===== -->
     <section class="registration-shell" id="payment-upload">
       <div class="row g-0">
-
         <div class="col-lg-5">
           <div class="registration-copy">
             <span class="registration-kicker">After Payment</span>
             <h1>Registration Submission</h1>
-
-            <p>
-              After completing the bank transfer, upload the conference payment record for your paper here. The system will save the Paper ID, First Author's Name, and Payment Screenshot to the registration database.
-            </p>
-
-            <p>
-              完成银行转账后，请在此提交论文缴费信息。系统会将 Paper ID、First Author's Name 和 Payment Screenshot 保存到后台数据库中。
-            </p>
-
+            <p>After completing the bank transfer, upload the conference payment record for your paper here. The system will save the Paper ID, First Author's Name, and Payment Screenshot to the registration database.</p>
+            <p>完成银行转账后，请在此提交论文缴费信息。系统会将 Paper ID、First Author's Name 和 Payment Screenshot 保存到后台数据库中。</p>
             <ul class="registration-points">
               <li>Paper ID and first author name are required.</li>
               <li>Payment Screenshot supports PNG, JPG, JPEG, and WEBP.</li>
@@ -261,7 +282,6 @@
             <p>Please fill in the form below and click confirm to submit your registration payment screenshot.</p>
 
             <form id="registrationForm" class="registration-form" novalidate>
-
               <div class="d-none" aria-hidden="true">
                 <label for="website">Website</label>
                 <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
@@ -280,29 +300,21 @@
               <div class="mb-4">
                 <label class="form-label" for="paymentScreenshot">Payment Screenshot</label>
                 <input class="form-control" id="paymentScreenshot" name="paymentScreenshot" type="file" accept=".png,.jpg,.jpeg,.webp,image/png,image/jpeg,image/webp" required>
-
                 <div class="registration-meta">
                   <span id="selectedFileName">No file selected.</span>
                   <span>Max size: 5 MB</span>
                 </div>
               </div>
 
-              <button id="submitButton" class="btn btn-danger registration-submit" type="submit">
-                Confirm / 确定
-              </button>
-
+              <button id="submitButton" class="btn btn-danger registration-submit" type="submit">Confirm / 确定</button>
               <div id="formStatus" class="registration-status" role="status" aria-live="polite"></div>
-
             </form>
           </div>
         </div>
-
       </div>
     </section>
-
   </main>
 
-  <!-- ===== Footer ===== -->
   <footer class="bg-dark text-white py-3">
     <div class="container text-center small">
       2026 IEEE USYS Conference Website
